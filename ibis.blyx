@@ -1,0 +1,49 @@
+use lineamount;
+use cashmatch;
+
+fn ibis_finite(values: vector) -> bool {
+    let mut i = 0;
+    while i < len(values) {
+        let value = at(values, i);
+        if !(value - value == 0.0) {
+            return false;
+        }
+        i += 1;
+    }
+    true
+}
+
+fn ibis_counts(values: vector) -> bool {
+    let mut i = 0;
+    while i < len(values) {
+        let value = at(values, i);
+        if !(value >= 0.0 && value <= 9007199254740991.0 && value % 1.0 == 0.0) {
+            return false;
+        }
+        i += 1;
+    }
+    true
+}
+
+fn ibis_compute(units: vector, prices: vector, payments: vector) -> vector {
+    let lines = lineamount_subtotal(units, prices);
+    if len(lines) == 0 {
+        return [];
+    }
+    let settle = cashmatch_apply(at(lines, 0), payments);
+    if len(settle) == 0 {
+        return [];
+    }
+    [at(lines, 0), at(settle, 0), at(settle, 1), at(settle, 2)]
+}
+
+// Reconcile an invoice with split payments in integer minor units.
+// Returns [subtotal, applied payment, open balance, credit]. Use a single currency and already-posted amounts.
+pub fn ibis_reconcile(units: vector, prices: vector, payments: vector) -> vector {
+    if !ibis_counts(units) { return []; }
+    if !ibis_counts(prices) { return []; }
+    if !ibis_counts(payments) { return []; }
+    let result = ibis_compute(units, prices, payments);
+    if !ibis_finite(result) { return []; }
+    result
+}
