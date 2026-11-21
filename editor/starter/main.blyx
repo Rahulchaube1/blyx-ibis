@@ -1,0 +1,14 @@
+use vendor::ibis::ibis;
+
+fn main() {
+    let units = [2, 1];
+    let prices = [125, 50];
+    let payments = [200, 125];
+    let result = ibis_reconcile(units, prices, payments);
+    if len(result) == 0 { println!("invalid"); return; }
+    let mut i = 0;
+    while i < len(result) {
+        println!(at(result, i));
+        i += 1;
+    }
+}

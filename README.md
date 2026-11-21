@@ -1,10 +1,14 @@
-<img src="assets/logo.png" width="112" height="112" alt="Ibis logo">
+<img src="assets/logo.png" width="112" height="112" alt="A scarlet ibis looks down along its long, curved bill.">
 
 # Ibis
 
 Reconcile an invoice with split payments in integer minor units. This Blyx workflow framework is part of the publishing and commerce collection.
 
 Partial payments and overpayments must remain distinguishable when an invoice is reconciled. [GnuCash, accounts receivable](https://www.gnucash.org/docs/v5/C/gnucash-guide/bus_ar.html)
+
+## Editor extension
+
+Install **RahulChaube.blyx-ibis** to run the worked example and use the framework’s function completions in a Blyx file. Open an empty `.blyx` file, enter `blyx-ibis-demo`, then choose **Blyx: Run File**. [Editor downloads](https://www.blyx-lang.space/packages/ibis#editor) · [Download the extension](https://github.com/Rahulchaube1/blyxxxx/releases/download/framework-editors-v0.1.0/blyx-ibis-0.1.0.vsix) · [Starter with framework source](https://github.com/Rahulchaube1/blyxxxx/releases/download/framework-editors-v0.1.0/blyx-ibis-starter-0.1.0.zip)
 
 ## Install and run
 
@@ -82,7 +86,7 @@ This release includes identical copies of both library modules so a tagged clone
 
 ## Verification and contributions
 
-The regression suite in [tests.blyx](tests.blyx) checks the example, boundary cases and invalid inputs. Include a short reproducer and your compiler version in [an issue](https://github.com/Rahulchaube1/blyx-ibis/issues). The source is dual-licensed under [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE). The package artwork uses [Lucide icons](https://lucide.dev/license); see [artwork notices](assets/NOTICE.txt).
+The regression suite in [tests.blyx](tests.blyx) checks the example, boundary cases and invalid inputs. Include a short reproducer and your compiler version in [an issue](https://github.com/Rahulchaube1/blyx-ibis/issues). The source is dual-licensed under [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE). The [artwork notice](assets/NOTICE.txt) records credits for earlier editions.
 
 ## Connect with Rahul Chaube
 

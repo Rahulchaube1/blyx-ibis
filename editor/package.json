@@ -1,0 +1,57 @@
+{
+  "name": "blyx-ibis",
+  "displayName": "Blyx Ibis",
+  "description": "Reconcile an invoice with split payments in integer minor units.",
+  "version": "0.1.0",
+  "publisher": "RahulChaube",
+  "license": "(MIT OR Apache-2.0)",
+  "icon": "logo.png",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "blyx",
+    "ibis",
+    "framework"
+  ],
+  "homepage": "https://www.blyx-lang.space/packages/ibis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rahulchaube1/blyx-ibis.git",
+    "directory": "editor"
+  },
+  "bugs": {
+    "url": "https://github.com/Rahulchaube1/blyx-ibis/issues"
+  },
+  "extensionDependencies": [
+    "RahulChaube.blyx-language"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "blyx",
+        "path": "./snippets/framework.json"
+      }
+    ],
+    "walkthroughs": [
+      {
+        "id": "ibis.start",
+        "title": "Get started with Ibis",
+        "description": "Reconcile an invoice with split payments in integer minor units.",
+        "steps": [
+          {
+            "id": "run",
+            "title": "Run the Ibis example",
+            "description": "Create an empty .blyx file, insert blyx-ibis-demo and choose **Blyx: Run File**.\n[Open the documentation](https://www.blyx-lang.space/packages/ibis)",
+            "media": {
+              "markdown": "walkthrough.md"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
